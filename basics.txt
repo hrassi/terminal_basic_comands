@@ -1,0 +1,67 @@
+
+
+list the files and directories  ls :
+
+basic usage :  ls [options] [file(s) or directory]
+
+ls                                   # Lists files and directories in the current directory
+ls ~/Documents           # Lists files and directories in the Documents directory 
+ls ~/anaconda3/envs  # will print     env27		env3.10		env39		py36-test
+ls -l             # Long listing format (displays detailed information)
+ls -a             # Display all files, including hidden files
+ls -lh            # Long listing format with human-readable file sizes
+ls -t             # Sort files by modification time
+
+
+remove files or directories   rm  :  
+
+basic usage:  rm [options] [file(s) or directory]  #  be carefull no easy way to recover
+
+rm file.txt              # Deletes the file named file.txt  (in the curent directory)
+rm -r directory     # Deletes the directory named directory and its contents recursively (in the curent directory)
+rm -i file.txt          # Interactive deletion of file.txt :prompt before each deletetion
+rm -f file.txt          # Force removal. This option overrides any warnings or prompts, and forcefully deletes files without  
+                                 confirmation
+rm -rf directory    # Forcefully and recursively deletes the directory named directory and its contents
+rm /path/to/directory/file.txt      # Removes file.txt located in /path/to/directory
+
+
+
+change directory   cd :
+
+basic usage:  cd [directory]
+
+cd Documents             # Changes to the Documents directory in the current directory
+cd /path/to/directory  # Changes to the directory specified by the absolute path /path/to/directory
+cd ~/Downloads          # Changes to the Downloads directory in your home directory
+cd ~                              # Change to the home directory : (base) macintosh@Sam-MacBook-Pro-2015 ~ % 
+                                      #  here the home directory in sam-macbook-pro-2015 is called macintosh , and base is
+                                      #  the base envirement 
+    #  u can also use :
+cd ..                           # Changes to the parent directory
+cd ../Documents       # Changes to the Documents directory in the parent directory
+
+
+
+creating files and directories  :
+
+
+touch filename.txt                               # Creates an empty file named filename.txt in the current directory
+touch ~/Documents/newfile.txt         # Creates an empty file named newfile.txt in the Documents directory
+mkdir directory_name                        # Creates a directory named directory_name in the current directory
+mkdir ~/Documents/new_directory   # Creates a directory named new_directory in the Documents directory
+mkdir dir1 dir2 dir3                             # Creates directories dir1, dir2, and dir3 in the current directory
+mkdir -p parent/child/grandchild      # Creates sub and sub directories if they dont exist: parent, child, and grandchild
+
+
+
+copying files and directories    cp : 
+
+
+usage :  cp source_file.txt destination_directory/
+
+cp file.txt ~/Documents/                    # Copies file.txt to the Documents directory
+cp file.txt ~/Documents/newfile.txt   # Copies file.txt to the Documents directory and renames it to newfile.txt
+cp -r directory/ ~/Documents/           # Copies the directory and its contents to the Documents directory
+cp -r directory/ ~/Documents/new_directory    # Copies the directory and its contents to the Documents directory and 
+                                                                               # renames it to new_directory
